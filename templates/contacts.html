@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">PhoneBook</h1>
+
+<form action="" method="get" class="add-contact">
+    <input type="search" name="search-area" placeholder="Search..." class="contact-search" style="" autofocus>
+    <input type="image" width="50px" src="../../static/images/icons/search.png" align="center" alt="Submit">
+
+    <a href="{% url 'create' %}">
+        <img width="55px" alt="A contact image" src="../../static/images/icons/add-contact.png">
+    </a>
+</form>
+
+<hr>
+
+{% for contact in contacts %}
+
+<h2 class="contact">
+    {% if contact.picture %}
+    <div>
+        <a style="text-decoration: none;" href="{% url 'info' contact.id %}">
+            <img class="contact-image" style="height: 4vh;" class="image-thumbail" alt="A contact image"
+                 src="{{ contact.picture.url }}">
+            <span class="contact-name"> {{contact}}</span>
+        </a>
+    </div>
+
+    {% else %}
+    <div>
+        <a style="text-decoration: none;" href="{% url 'info' contact.id %}">
+            <img class="contact-image" style="height: 4vh;" class="image-thumbail" alt="A contact image"
+                 src="../../static/images/icons/picIcon.png">
+            <span class="contact-name"> {{contact}}</span>
+        </a>
+    </div>
+    {% endif %}
+</h2>
+<hr>
+
+{% empty%}
+    <h2>No contact found!</h2>
+{% endfor %}
+
+
+{% endblock content %}

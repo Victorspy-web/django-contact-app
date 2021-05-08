@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="title">{{ contact.firstName }}'s Contact Info</h1>
+
+{% if contact.picture %}
+
+<div>
+    <a href="">
+        <img style="height: 20vh;" class="image-thumbail" alt="A contact image" src="{{ contact.picture.url }}">
+    </a>
+</div>
+
+{% else %}
+<div>
+    <a href="">
+        <img style="height: 20vh;" class="image-thumbail" alt="A contact image"
+             src="../../static/images/icons/picIcon.png">
+    </a>
+</div>
+{% endif %}
+
+
+<div>
+    <div>
+        <h2>First Name : {{ contact.firstName }}</h2>
+    </div>
+
+    {% if contact.lastName %}
+    <div>
+        <h2>Last Name : {{ contact.lastName }}</h2>
+    </div>
+    {% endif %}
+
+
+    {% if contact.nickName %}
+    <div>
+        <h2>Nick Name : {{ contact.nickName }}</h2>
+    </div>
+    {% endif %}
+
+    <div>
+        <h2>Telephone : {{ contact.phone }}</h2>
+    </div>
+
+
+    {% if contact.email %}
+    <div>
+        <h2>Email : {{ contact.email }}</h2>
+    </div>
+    {% endif %}
+
+
+    {% if contact.groups %}
+    <div>
+        <h2>Group : {{ contact.groups }}</h2>
+    </div>
+    {% endif %}
+</div>
+
+
+<a class="nav-link" href="{% url 'contacts' %}">Back</a>
+
+<a class="nav-link"  href="{% url 'update' contact.id %}">Update</a>
+
+<a class="nav-link"  href="{% url 'delete' contact.id %}">Delete</a>
+
+{% endblock content %}

@@ -1,0 +1,109 @@
+body a{
+    text-decoration: none;
+}
+
+.contact-search {
+    width:300px;
+    height: 50px;
+    font-size: 1.2em;
+}
+
+.title {
+    text-align: center;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px;
+}
+
+.contact a{
+    font-family: sans-serif;
+    color: black;
+    font-weight: 100;
+}
+
+.contact-image {
+    border-radius: 5px;
+
+}
+
+.contact-name {
+    margin-left: 20px;
+}
+
+.add-contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    font-size: 1.3em;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px;
+    border: solid 1px black;
+}
+
+
+#id_picture::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#id_picture::before {
+  content: 'Select a picture file';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+#id_picture:hover::before {
+  border-color: black;
+}
+
+#id_picture:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+
+#id_firstName {
+    width: 250px;
+    height: 25px;
+    font-size: 1.1em;
+}
+
+#id_lastName {
+    width: 250px;
+    height: 25px;
+    font-size: 1.1em;
+}
+
+#id_nickName {
+    width: 250px;
+    height: 25px;
+    font-size: 1.1em;
+}
+
+#id_phone {
+    width: 250px;
+    height: 25px;
+    font-size: 1.1em;
+}
+
+#id_email {
+    width: 250px;
+    height: 25px;
+    font-size: 1.1em;
+}
+
+
