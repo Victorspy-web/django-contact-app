@@ -13,7 +13,7 @@ class Contact(models.Model):
 	firstName = models.CharField(max_length=100, null=False, blank=False)
 	lastName = models.CharField(max_length=100, blank=True)
 	nickName = models.CharField(max_length=100, blank=True)
-	phone = models.CharField(max_length=15, null=False, blank=False)
+	phone = models.IntegerField(null=False, blank=False)
 	email = models.EmailField(blank=True)
 	groups = models.CharField(
 		max_length=100,

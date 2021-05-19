@@ -22,8 +22,8 @@
     <div>
         <a style="text-decoration: none;" href="{% url 'info' contact.id %}">
             <img class="contact-image" style="height: 4vh;" class="image-thumbail" alt="A contact image"
-                 src="{{ contact.picture.url }}">
-            <span class="contact-name"> {{contact}}</span>
+                src="{{ contact.picture.url }}">
+            <b class="contact-name"> {{contact}}</b>
         </a>
     </div>
 
@@ -31,7 +31,7 @@
     <div>
         <a style="text-decoration: none;" href="{% url 'info' contact.id %}">
             <img class="contact-image" style="height: 4vh;" class="image-thumbail" alt="A contact image"
-                 src="../../static/images/icons/picIcon.png">
+                src="../../static/images/icons/picIcon.png">
             <span class="contact-name"> {{contact}}</span>
         </a>
     </div>
